@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3 uid="uid://dooymoohfagwr"]
+
+[ext_resource type="Script" path="res://SpriteSorter.gd" id="1_e5fo4"]
+[ext_resource type="PackedScene" uid="uid://7rw1i8w717fi" path="res://block.tscn" id="2_dh80f"]
+
+[node name="Main" type="Node2D"]
+z_index = 4096
+script = ExtResource("1_e5fo4")
+groups = [[&"Block"], [&"Block2"]]
+debug_view = true
+metadata/_edit_vertical_guides_ = []
+
+[node name="Block" parent="." instance=ExtResource("2_dh80f")]
+z_as_relative = false
+position = Vector2(607, 391)
+
+[node name="Block2" parent="." instance=ExtResource("2_dh80f")]
+z_as_relative = false
+position = Vector2(473, 389)
+
+[node name="Block3" parent="." instance=ExtResource("2_dh80f")]
+z_as_relative = false
+position = Vector2(537, 482)
+z = 50.0
+width = 137.27
+height = 55.6
+depth = 6.25
+fixZ = false
+
+[node name="Block4" parent="." instance=ExtResource("2_dh80f")]
+z_as_relative = false
+position = Vector2(450, 393)
+
+[node name="Block5" parent="." instance=ExtResource("2_dh80f")]
+z_as_relative = false
+position = Vector2(553, 386)
+
+[node name="Block6" parent="." instance=ExtResource("2_dh80f")]
+z_as_relative = false
+position = Vector2(453, 428)
+
+[node name="Block7" parent="." instance=ExtResource("2_dh80f")]
+z_as_relative = false
+position = Vector2(580, 403)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(528, 374)
+scale = Vector2(1.54, 1.54)
+zoom = Vector2(4.87, 4.87)

@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://d0puedff2gx8c"]
+
+[ext_resource type="Texture2D" uid="uid://ddjd2mdeilckm" path="res://top.png" id="1_gjjbh"]
+[ext_resource type="Texture2D" uid="uid://hjmcudqhek8f" path="res://bottom.png" id="2_e2stm"]
+[ext_resource type="Script" path="res://Sprite3D.gd" id="2_q41oi"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ybxnh"]
+
+[node name="Sprite" type="Node3D"]
+
+[node name="Top" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.26251)
+axis = 1
+transparent = false
+texture = ExtResource("1_gjjbh")
+script = ExtResource("2_q41oi")
+
+[node name="Bottom" type="Sprite3D" parent="."]
+axis = 1
+transparent = false
+texture = ExtResource("2_e2stm")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.0448748, 0.998993, 0, -0.998993, -0.0448748, 0.0592889, 3.77578, -0.348668)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.44552)
+shape = SubResource("SphereShape3D_ybxnh")
